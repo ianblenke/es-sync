@@ -1,0 +1,21 @@
+version: "2.1"
+
+services:
+
+  es-sync:
+    build: .
+    image: sofwerx/es-sync
+    container_name: es-sync
+    hostname: es-sync
+    environment:
+      SLEEP: ${SLEEP}
+      DST_URL: ${DST_URL}
+      DST_USER: ${DST_USER}
+      DST_PASS: ${DST_PASS}
+      SRC_URL: ${SRC_URL}
+      SRC_USER: ${SRC_USER}
+      SRC_PASS: ${SRC_PASS}
+      SRC_INCLUDE_FILTER: ${SRC_INCLUDE_FILTER}
+      SRC_EXCLUDE_FILTER: ${SRC_EXCLUDE_FILTER}
+
+
